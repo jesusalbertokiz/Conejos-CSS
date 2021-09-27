@@ -1,0 +1,378 @@
+:root 
+{
+    
+    --dark-brown: #a54a38;
+    --light-brown: #bf624c;
+    --light-green: #51af5e;
+    --shadow: 0 19px 38px rgba(0,0,0,0.30),
+              0 15px 12px rgba(0,0,0,0.22);
+}
+body
+{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    counter-reset: score;
+}
+h1
+{
+    text-align: center;
+    font-size: 200px;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    color: rgb(214, 54, 54);
+}
+h2
+{
+    text-align: center;
+    font-size: 150px;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/*----------------LAYERS--------------------*/
+
+.phone /*Phone*/
+{
+    position: relative;
+    border: 20px solid black;
+    border-radius: 100px;
+    height: 1920px;
+    width: 1080px;
+    overflow: hidden;
+    background: #a3dbf2;
+    box-shadow: 0 19px 38px rgb(0, 0, 0.3), 0 15px 12px rgb(0, 0, 0.22);
+}
+.layer-1 /*Little bunny 1*/
+{
+    position: absolute;
+    z-index: 10;
+    height: 1400px;
+    width: 250px;
+    /*background-color: white;*/
+    bottom: 0;
+    right: 240px;
+    animation: layer 1.2s ease infinite;  
+} 
+@keyframes layer
+{
+    0%
+    {
+        bottom: 0;
+    }
+    50%
+    {
+        bottom: -210px;
+    }
+    100%
+    {
+        bottom: 10px;
+    }
+}
+.layer-2 /*Little bunny 2*/
+{
+    position: absolute;
+    z-index: 20;
+    height: 1400px;
+    width: 250px;
+    bottom: 0;
+    left: 240px;
+    animation: layer 1s ease infinite;
+} 
+.layer-3 /*Mountain-1*/
+{
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 1200px;
+    width: 800px;
+    background-color: var(--light-brown);
+    bottom: 0;  
+    box-shadow: var(--shadow);
+    border-radius: 10%;
+    overflow: hidden;
+}
+.layer-4 /*Little bunny 3*/
+{
+    position: absolute;
+    z-index: 40;
+    height: 1000px;
+    width: 250px;
+    /*background-color: white;*/
+    bottom: 0;
+    left: 100px;
+    animation: layer 2s ease infinite;
+} 
+.layer-5 /*Mountain-2*/
+{
+    position: absolute;
+    z-index: 50;
+    height: 800px;
+    width: 700px;
+    background-color: var(--light-brown);
+    bottom: 0;
+    box-shadow: var(--shadow);
+    border-radius: 10%;
+    overflow: hidden;
+} 
+.layer-6 /*Little bunny 4*/
+{
+    position: absolute;
+    z-index: 60;
+    width: 250px;
+    height: 800px;
+    /*background-color: white;*/
+    bottom: 0;
+    right: 100px;
+    animation: layer 0.9s ease infinite;
+}
+.layer-7 /*Mountain-3*/
+{
+    position: absolute;
+    z-index: 70;
+    width: 700px;
+    height: 600px;
+    background-color: var(--light-brown);
+    bottom: 0;
+    right: 0;
+    box-shadow: var(--shadow);
+    border-radius: 10%;
+    overflow: hidden;
+} 
+.layer-8 /*Lawn*/
+{
+    position: absolute;
+    z-index: 80;
+    height: 450px;
+    width: 650px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+} 
+.layer-8__left-lawn
+{
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 70%;
+    background: var(--light-green);
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.layer-8__center-lawn
+{
+    position: absolute;
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    background: var(--light-green);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50% 50% 0 0;
+    bottom: 0;
+}
+.layer-8__right-lawn
+{
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 70%;
+    background: var(--light-green);
+    right: 0;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.layer-9 /*Cloud-1*/
+{
+    position: absolute;
+    z-index: 90;
+    width: 500px;
+    height: 400px;
+    bottom: 0;
+    right: 0;
+} 
+.layer-9__left-cloud
+{
+    background: white;
+    border-radius: 50% 0 0 50%;
+    bottom: 0;
+    display: inline-block;
+    height: 70%;
+    left: 80px;
+    position: absolute;
+    width: 250px;
+}
+.layer-9__right-cloud
+{
+    position: absolute;
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    background: white;
+    right: 0;
+    border-radius: 50% 50% 0 0;
+}
+.layer-10 /*Cloud-2*/
+{
+    position: absolute;
+    z-index: 100;
+    width: 500px;
+    height: 400px;
+    bottom: 0;
+    left: 0;
+}
+.layer-10__left-cloud
+{
+    background: white;
+    border-radius: 0 50% 50% 0;
+    bottom: 0;
+    display: inline-block;
+    height: 70%;
+    right: 80px;
+    position: absolute;
+    width: 250px;
+}
+.layer-10__right-cloud
+{
+    position: absolute;
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    background: white;
+    left: 0;
+    border-radius: 50% 50% 0 0;
+}
+.lawn /*Montain´s lawn*/
+{
+    width: 100%;
+    height: 80px;
+    background-color: #51af5e;
+}
+.land /*Montain´s land*/
+{
+    width: 100%;
+    height: 80px;
+    background-color: #51af5e;
+    background-color: #e5e5f7;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #51af5e 25%, transparent 25%), linear-gradient(225deg, #51af5e 25%, transparent 25%), linear-gradient(45deg, var(--light-brown) 25%, transparent 25%), linear-gradient(315deg, var(--light-brown) 25%, var(--dark-brown) 25%);
+    background-position:  40px 0, 40px 0, 0 0, 0 0;
+    background-size: 80px 80px;
+    background-repeat: repeat;
+}
+
+/*-----------------LITTLE BUNNYS-----------------*/
+.head /*Bunny´s head*/
+{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: whitesmoke;
+    top: 100px;
+    border-radius:50% ;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+.left-ear-outner /*Bunny´s ear*/
+{
+    position: absolute;
+    width: 90px;
+    height: 200px;
+    background-color: whitesmoke;
+    border-radius: 90%;
+    left: 10px;
+}
+.left-ear-inner /*Bunny´s ear*/
+{
+    position: absolute;
+    width: 60px;
+    height: 150px;
+    background-color: rgb(230, 102, 102);
+    border-radius: 90%;
+    left: 25px;
+    top: 22px;
+}
+.right-ear-outner /*Bunny´s ear*/
+{
+    position: absolute;
+    width: 90px;
+    height: 200px;
+    background-color: whitesmoke;
+    border-radius: 90%;
+    right: 10px;
+}
+.right-ear-inner /*Bunny´s ear*/
+{
+    position: absolute;
+    width: 60px;
+    height: 150px;
+    background-color: rgb(230, 102, 102);
+    border-radius: 90%;
+    right: 25px;
+    top: 22px;
+}
+.head__eye /*Bunny´s eyes*/
+{
+    background-color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 69px;
+    position: absolute;
+    animation: blink 1s infinite
+}
+@keyframes blink /*Eye´s blink*/
+{
+    0%
+    {
+        height: 30px;
+    }
+    10%
+    {
+        height: 10px;
+        transform: translateY(15px);
+    }
+    20%
+    {
+        height: 30px;
+        transform: translateY(0);
+    }
+}
+.head__eye--left /*Bunny´s eye left position*/
+{
+    left: 70px;
+}
+.head__eye--right /*Bunny´s eye left position*/
+{
+    right: 70px;
+}
+/*---------------SCORES AND INPUTS----------------*/
+
+input[type=checkbox] 
+{
+    appearance: none;
+    cursor: pointer;
+    height: 80%;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+input:checked
+{
+    counter-increment: score;
+}
+
+.score::after
+{
+    content: counter(score);
+}
